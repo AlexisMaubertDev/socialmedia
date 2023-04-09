@@ -1,0 +1,111 @@
+.box {
+  display: flex;
+  padding: 10px;
+  margin: 1rem;
+  border-radius: 10px;
+  background-color: var(--light-color);
+  width: 700px;
+  border: 1px solid var(--shadow-color);
+  flex-direction: column;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  border-bottom: 1px solid var(--shadow-color);
+}
+
+.userpic {
+  height: 50px;
+  width: 50px;
+  margin: 0.5rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  font-size: 16px;
+}
+
+.userinfo span {
+  font-size: 12px;
+}
+
+.text {
+  margin-top: 5px;
+  padding: 5px 20px;
+  font-size: 14px;
+}
+.img {
+  background-color: var(--main-color);
+  margin: 0px 20px;
+  height: 300px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+}
+
+.reacciones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
+  font-size: 12px;
+  padding: 10px 10px;
+  border-bottom: 1px solid var(--shadow-color);
+  position: relative;
+}
+
+.reacciones p{
+  cursor: pointer;
+  transition: all 5ms ;
+}
+
+.listOfLikes{
+  list-style: none;
+  background-color: var(--shadow-color);
+  padding: 5px;
+  border-radius: 15px;
+  border-bottom-left-radius: 0px;
+  position: absolute;
+  left: 3.5rem;
+  bottom: 0.5rem;
+  display: none;
+}
+.showUserLikes{
+  display: block;
+}
+.reaccionar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 5px;
+  list-style: none;
+  padding: 10px 10px 0px 10px;
+}
+.box a,
+.reaccionar p {
+  color: var(--main-color-font);
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+}
+.box a:hover,
+.reaccionar p:hover {
+  color: var(--main-color);
+  text-decoration: underline;
+}
+

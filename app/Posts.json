@@ -1,0 +1,88 @@
+[
+  {
+    "id": "p001",
+    "userid": "u001",
+    "text": "Success is not just about reaching your goals, it's about the journey you take to get there. Embrace the ups and downs and enjoy every step of the way!",
+    "comments": [
+      {
+        "id": "c001",
+        "userid": "u002",
+        "text": "Nice!",
+        "likes": ["u001"],
+        "responses": [
+          {
+            "id": "r001",
+            "userid": "u001",
+            "likes": ["u002"],
+            "text": "Thanks!"
+          }
+        ]
+      },
+      {
+        "id": "c002",
+        "userid": "u003",
+        "text": "Amazing Alexis! Beautyful landscape btw",
+        "likes": ["u002"],
+        "responses": []
+      }
+    ],
+    "likes": ["u002", "u003", "u004"],
+    "shared": false,
+    "userowner": null,
+    "imgurl": "url('https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_960_720.jpg')"
+  },
+  {
+    "id": "p002",
+    "userid": "u003",
+    "text": "Someone knows how to use React?",
+    "comments": [
+      {
+        "userid": "u001",
+        "text": "Yes! I do.",
+        "likes": [],
+        "responses": []
+      }
+    ],
+    "likes": ["u001"],
+    "shared": false,
+    "userowner": null,
+    "imgurl": null
+  },
+  {
+    "id": "p003",
+    "userid": "u001",
+    "text": "Believe in yourself and trust the process. You have the power to make your dreams a reality!",
+    "comments": [
+      {
+        "userid": "u003",
+        "text": "Good job!",
+        "likes": [],
+        "responses": []
+      }
+    ],
+    "likes": ["u003"],
+    "shared": false,
+    "userowner": null,
+    "imgurl": "url('https://cdn.pixabay.com/photo/2023/03/29/09/12/winter-hike-7884967_1280.jpg')"
+  },
+  {
+    "id": "p004",
+    "userid": "u001",
+    "text": "Don't let fear hold you back from achieving greatness. Take that first step towards your goals and watch yourself soar!",
+    "comments": [],
+    "likes": [],
+    "shared": false,
+    "userowner": null,
+    "imgurl": "url('https://cdn.pixabay.com/photo/2023/03/19/19/38/mountain-7863224_1280.jpg')"
+  },
+  {
+    "id": "p005",
+    "userid": "u002",
+    "text": "Life is too short to hold grudges and negativity. Let go of the past and focus on creating a brighter future for yourself!",
+    "comments": [],
+    "likes": ["u001"],
+    "shared": false,
+    "userowner": null,
+    "imgurl": "url('https://cdn.pixabay.com/photo/2023/03/25/17/35/girl-7876505_1280.jpg')"
+  }
+]

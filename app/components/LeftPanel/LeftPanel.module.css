@@ -1,0 +1,65 @@
+.personalInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: var(--light-color);
+  border-radius: 10px;
+  margin: 1rem 0rem;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid var(--shadow-color);
+  width: 250px;
+  height: max-content;
+}
+.info {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--shadow-color);
+}
+.left {
+  width: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+.right {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.right h4 {
+  color: var(--main-color);
+}
+
+.right span {
+  font-size: 11px;
+}
+
+.actividad {
+  list-style: none;
+  width: 100%;
+}
+
+.actividad li {
+  display: flex;
+}
+
+.actividad li a {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  text-decoration: none;
+  color: var(--main-color-font);
+  padding: 5px 10px;
+  transition: all 0.2s ease;
+  border-radius: 5px;
+}
+
+.actividad li a:hover {
+  background-color: var(--shadow-color);
+}

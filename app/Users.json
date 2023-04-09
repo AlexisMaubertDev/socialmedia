@@ -1,0 +1,50 @@
+[
+  {
+    "id": "u001",
+    "name": "Alexis",
+    "lastName": "Maubert",
+    "birthday": "12-08-1993",
+    "email": "alexismaubertop@gmail.com",
+    "following": ["u002","u003","u004"],
+    "followers": ["u002","u003","u004"],
+    "profession": "Full-Stack Developer",
+    "abilities": ["js","react","next"],
+    "profilePic": "url('https://cdn-icons-png.flaticon.com/512/3135/3135768.png')"
+  },
+  {
+    "id": "u002",
+    "name": "Jane",
+    "lastName": "Doe",
+    "birthday": "01-01-2000",
+    "email": "janedoe@example.com",
+    "following": ["u001"],
+    "followers": ["u001"],
+    "profession": "Back-End Developer",
+    "abilities": ["php","laravel"],
+    "profilePic": "url('https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359554_1280.png')"
+  },
+  {
+    "id": "u003",
+    "name": "Carl",
+    "lastName": "Smith",
+    "birthday": "19-06-1980",
+    "email": "carlsmith@example.com",
+    "following": ["u001"],
+    "followers": ["u001"],
+    "profession": "Back-End Developer",
+    "abilities": ["js","node","express"],
+    "profilePic": "url('https://cdn-icons-png.flaticon.com/512/3135/3135768.png')"
+  },
+  {
+    "id": "u004",
+    "name": "Richard",
+    "lastName": "Johnson",
+    "birthday": "11-12-1985",
+    "email": "richardjohnson@example.com",
+    "following": ["u001"],
+    "followers": ["u001"],
+    "profession": "Front-End Developer",
+    "abilities": ["js","angular"],
+    "profilePic": "../../../public/profile.png"
+  }
+]

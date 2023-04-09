@@ -1,0 +1,101 @@
+.container{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.3);
+  z-index: 999;
+  display: none;
+  font-size: 12px;
+}
+
+.modalVisible{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalComment{
+  background-color: var(--light-color);
+  border: 1px solid var(--shadow-color);
+  border-radius: 10px;
+  min-height: 18vh;
+  width: 750px;
+}
+.containerCloseButton{  
+  display: flex;
+  justify-content: flex-end;
+}
+.closeButton{
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+}
+.listContainer{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--shadow-color);
+}
+.commentContainer{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+  padding-top: 10px;
+  margin: 0 15px;
+  
+}
+.commentUser{
+  width: 650px;
+  font-weight: bold;
+}
+.commentText{
+  font-weight: 400;
+  margin: 10px;
+  border: 1px solid var(--shadow-color);
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.userPic{
+  width: 75px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 75px;
+}
+.bottomContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.countLikes{
+  font-weight: 400;
+}
+.reaccionesComments{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 3px;
+  padding: 10px;
+}
+.reaccionesComments li {
+  list-style: none;
+  font-weight: 400;
+}
+
+.reaccionesComments a,
+.reaccionesComments p {
+  color: var(--main-color-font);
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+}
+.reaccionesComments a:hover,
+.reaccionesComments p:hover {
+  color: var(--main-color);
+  text-decoration: underline;
+}
