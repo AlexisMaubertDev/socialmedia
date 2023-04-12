@@ -4,8 +4,9 @@ import { useState } from "react";
 import { Comments } from "../Comments/Comments";
 
 export function CommentModal({ comments, show, closeModal }) {
-  const userloged = "u002";
+  const userloged = "u001";
   const [like, setLike] = useState([]);
+  const [currentComment, setCurrentComment] = useState("");
 
   const showUser = (id) => {
     const user = users.find((u) => u.id === id);
@@ -17,8 +18,18 @@ export function CommentModal({ comments, show, closeModal }) {
     return user.profilePic;
   };
 
-
-
+  const handleClick = () => {
+    if (currentComment !== "") {
+      comments.push({
+        id: "c003",
+        userid: userloged,
+        text: currentComment,
+        likes: [],
+        responses: [],
+      });
+      setCurrentComment("");
+    }
+  };
   return (
     <div
       className={
@@ -45,30 +56,21 @@ export function CommentModal({ comments, show, closeModal }) {
                   <div className={styles.commentUser}>
                     {showUser(comment.userid)}
                     <Comments comment={comment} />
-                    {/* <div className={styles.commentText}>{comment.text}</div>
-
-                     <div className={styles.bottomContainer}>
-                      <p className={styles.countLikes}>{like.length} Likes</p>
-                      <ul className={styles.reaccionesComments}>
-                        <li>
-                         <p 
-              //               onLoad={() => setLike(comment.likes)}
-              //               onClick={() => handleLike()}
-              //             >
-              //               Like
-              //             </p>
-              //             {console.log(like)}
-              //           </li>
-              //           <li>
-              //             <p>Answer</p>
-              //           </li>
-              //         </ul>
-              //       </div>*/}
                   </div>
                 </div>
               </li>
             );
           })}
+          <li className={styles.inputComment}>
+            <input
+              type="text"
+              value={currentComment}
+              required
+              onChange={(e) => setCurrentComment(e.target.value)}
+            />
+
+            <input type="submit" value="Comment" onClick={handleClick} />
+          </li>
         </ul>
       </div>
     </div>
