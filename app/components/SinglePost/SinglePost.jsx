@@ -63,7 +63,7 @@ export function SinglePost({ post }) {
             >
               {like.map((l) => {
                 const userLike = users.find((u) => u.id === l);
-                return <li>{userLike.name + " " + userLike.lastName}</li>;
+                return <li key={l}>{userLike.name + " " + userLike.lastName}</li>;
               })}
             </ul>
           ) : null}

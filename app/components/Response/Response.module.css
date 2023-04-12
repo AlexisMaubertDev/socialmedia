@@ -1,0 +1,63 @@
+.responseContainer{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+  padding-top: 5px;
+  margin: 0 50px;
+}
+.userPic{
+  width: 60px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60px;
+}
+
+.responseUser{
+  width: 500px;
+  font-weight: bold;
+}
+
+.response{
+  font-weight: 400;
+  margin: 10px;
+  border: 1px solid var(--shadow-color);
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.responseBottomContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.countLikes{
+  font-weight: 400;
+}
+.reaccionesResponse{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+}
+.reaccionesResponse li {
+  list-style: none;
+  font-weight: 400;
+}
+
+.reaccionesResponse a,
+.reaccionesResponse p {
+  color: var(--main-color-font);
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+}
+.reaccionesResponse a:hover,
+.reaccionesResponse p:hover {
+  color: var(--main-color);
+  text-decoration: underline;
+}

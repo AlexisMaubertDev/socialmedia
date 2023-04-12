@@ -2,6 +2,7 @@ import styles from "./CommentModal.module.css";
 import users from "../../Users.json";
 import { useState } from "react";
 import { Comments } from "../Comments/Comments";
+import { Response } from "../Response/Response";
 
 export function CommentModal({ comments, show, closeModal }) {
   const userloged = "u001";
@@ -58,6 +59,9 @@ export function CommentModal({ comments, show, closeModal }) {
                     <Comments comment={comment} />
                   </div>
                 </div>
+                {comment.responses.map((response) => {
+                  return <Response response={response} key={response.id} />;
+                })}
               </li>
             );
           })}
