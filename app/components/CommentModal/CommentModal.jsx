@@ -3,11 +3,13 @@ import users from "../../Users.json";
 import { useState } from "react";
 import { Comments } from "../Comments/Comments";
 import { Response } from "../Response/Response";
+import { AddComment } from "../AddComment/AddComment";
 
 export function CommentModal({ comments, show, closeModal }) {
   const userloged = "u001";
-  const [like, setLike] = useState([]);
   const [currentComment, setCurrentComment] = useState("");
+  const [changes, setChanges] = useState("0");
+  const [showResponses, setShowResponses] = useState(false);
 
   const showUser = (id) => {
     const user = users.find((u) => u.id === id);
@@ -31,6 +33,7 @@ export function CommentModal({ comments, show, closeModal }) {
       setCurrentComment("");
     }
   };
+
   return (
     <div
       className={
@@ -56,12 +59,11 @@ export function CommentModal({ comments, show, closeModal }) {
                   ></div>
                   <div className={styles.commentUser}>
                     {showUser(comment.userid)}
-                    <Comments comment={comment} />
+                    <Comments
+                      comment={comment}
+                    />
                   </div>
                 </div>
-                {comment.responses.map((response) => {
-                  return <Response response={response} key={response.id} />;
-                })}
               </li>
             );
           })}

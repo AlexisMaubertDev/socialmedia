@@ -1,8 +1,9 @@
 import styles from "./Response.module.css";
 import { useState } from "react";
 import users from "../../Users.json";
+import { AddComment } from "../AddComment/AddComment";
 
-export function Response({ response }) {
+export function Response({ response, comment, show}) {
   const userloged = "u001";
   const [like, setLike] = useState(response.likes);
 
@@ -22,28 +23,31 @@ export function Response({ response }) {
       setLike([...like, userloged]);
     }
   };
+
   return (
-    <div className={styles.responseContainer}>
-      <div
-        className={styles.userPic}
-        style={{
-          backgroundImage: showProfilePic(response.userid),
-        }}
-      ></div>
-      <div className={styles.responseUser}>
-        {showUser(response.userid)}
-        <div className={styles.response}>{response.text}</div>
-        <div className={styles.responseBottomContainer}>
-          <p className={styles.countLikes}>{like.length} Likes</p>
-          <ul className={styles.reaccionesResponse}>
-            <li>
-              <p onClick={() => handleLike()}>
-                {like.includes(userloged) ? "Dislike" : "Like"}
-              </p>
-            </li>
-          </ul>
+    <>
+      <div className={show ? styles.showResponse + " " + styles.responseContainer : styles.responseContainer }>
+        <div
+          className={styles.userPic}
+          style={{
+            backgroundImage: showProfilePic(response.userid),
+          }}
+        ></div>
+        <div className={styles.responseUser}>
+          {showUser(response.userid)}
+          <div className={styles.response}>{response.text}</div>
+          <div className={styles.responseBottomContainer}>
+            <p className={styles.countLikes}>{like.length} Likes</p>
+            <ul className={styles.reaccionesResponse}>
+              <li>
+                <p onClick={() => handleLike()}>
+                  {like.includes(userloged) ? "Dislike" : "Like"}
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

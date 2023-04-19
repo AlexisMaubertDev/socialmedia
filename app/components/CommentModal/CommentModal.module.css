@@ -1,22 +1,22 @@
-.container{
+.container {
   position: fixed;
   width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: rgba(0,0,0,.3);
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 999;
   display: none;
   font-size: 12px;
 }
 
-.modalVisible{
+.modalVisible {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.modalComment{
+.modalComment {
   background-color: var(--light-color);
   border: 1px solid var(--shadow-color);
   border-radius: 10px;
@@ -25,34 +25,32 @@
   width: 750px;
   overflow-y: scroll;
 }
-.containerCloseButton{  
+.containerCloseButton {
   display: flex;
   justify-content: flex-end;
 }
-.closeButton{
+.closeButton {
   display: block;
   padding: 10px;
   cursor: pointer;
 }
-.listContainer{
+.listContainer {
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid var(--shadow-color);
-}
-.commentContainer{
-  display: flex;
   justify-content: center;
-  align-items: flex-start;
+}
+.commentContainer {
+  display: flex;
   gap: 5px;
   padding-top: 10px;
   margin: 0 15px;
-  
 }
-.commentUser{
+.commentUser {
   width: 650px;
   font-weight: bold;
 }
-.commentText{
+.commentText {
   font-weight: 400;
   margin: 10px;
   border: 1px solid var(--shadow-color);
@@ -61,22 +59,22 @@
   border-radius: 10px;
 }
 
-.userPic{
+.userPic {
   width: 75px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 75px;
 }
-.bottomContainer{
+.bottomContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.countLikes{
+.countLikes {
   font-weight: 400;
 }
-.reaccionesComments{
+.reaccionesComments {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -102,7 +100,18 @@
   text-decoration: underline;
 }
 
-.inputComment{
+.inputResponseContainer{
+  background-color: #c2c2c2;
+  width: 86.3%;
+  align-self: center;
+  border-top: 1px solid var(--shadow-color);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 5px;
+  display: flex;
+}
+.inputComment,
+.inputResponse {
   margin: 15px;
   border-radius: 10px;
   list-style: none;
@@ -112,21 +121,23 @@
   background-color: #fff;
   padding: 5px;
 }
-
-.inputComment input[type="text"] {
+.inputComment input[type="text"],
+.inputResponse input[type="text"] {
   border: none;
   padding: 10px;
   width: 90%;
   background-color: #fff;
 }
 
-.inputComment input[type="submit"]{
+.inputComment input[type="submit"],
+.inputResponse input[type="submit"] {
   padding: 10px;
   border-radius: 15px;
   background-color: var(--main-color);
   font-weight: 600;
   cursor: pointer;
 }
-.inputComment input:focus-visible{
+.inputComment input:focus-visible,
+.inputResponse input:focus-visible {
   outline-style: none;
 }

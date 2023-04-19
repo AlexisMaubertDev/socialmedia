@@ -1,9 +1,12 @@
+import { AddComment } from "../AddComment/AddComment";
 import styles from "../CommentModal/CommentModal.module.css";
 import { useState } from "react";
+import { Response } from "../Response/Response";
 
 export function Comments({ comment }) {
   const userloged = "u001";
   const [like, setLike] = useState(comment.likes);
+  const [show, setShow] = useState(false);
 
   const handleLike = () => {
     if (like.includes(userloged)) {
@@ -11,6 +14,9 @@ export function Comments({ comment }) {
     } else {
       setLike([...like, userloged]);
     }
+  };
+  const handleShow = () => {
+    setShow(!show);
   };
 
   return (
@@ -25,10 +31,23 @@ export function Comments({ comment }) {
             </p>
           </li>
           <li>
-            <p>Answer</p>
+            <p onClick={handleShow}>
+              {show ? "Answers ▲" : "Answers ▼"}
+            </p>
           </li>
         </ul>
       </div>
+      {comment.responses.map((response) => {
+        return (
+          <Response
+            response={response}
+            comment={comment}
+            key={response.id}
+            show={show}
+          />
+        );
+      })}
+      <AddComment comment={comment} show={show} />
     </>
   );
 }

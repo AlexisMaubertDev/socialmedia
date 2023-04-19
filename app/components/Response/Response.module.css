@@ -1,12 +1,23 @@
-.responseContainer{
-  display: flex;
+.responseContainer {
   justify-content: center;
   align-items: flex-start;
   gap: 5px;
   padding-top: 5px;
-  margin: 0 50px;
+  background-color: #c2c2c2;
+  display: flex;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  transition: opacity 0.5s ease-in-out, height 0.5s linear 0.5s,
+    width 1s linear 0.5s;
 }
-.userPic{
+.showResponse {
+  opacity: 1;
+  height: 122px;
+  width: 100%;
+  transition: height 0.5s linear, opacity 0.5s linear 0.5s;
+}
+.userPic {
   width: 60px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -14,12 +25,12 @@
   height: 60px;
 }
 
-.responseUser{
+.responseUser {
   width: 500px;
   font-weight: bold;
 }
 
-.response{
+.response {
   font-weight: 400;
   margin: 10px;
   border: 1px solid var(--shadow-color);
@@ -28,15 +39,15 @@
   border-radius: 10px;
 }
 
-.responseBottomContainer{
+.responseBottomContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.countLikes{
+.countLikes {
   font-weight: 400;
 }
-.reaccionesResponse{
+.reaccionesResponse {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
