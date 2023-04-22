@@ -5,10 +5,10 @@
     "lastName": "Maubert",
     "birthday": "12-08-1993",
     "email": "alexismaubertop@gmail.com",
-    "following": ["u002","u003","u004"],
-    "followers": ["u002","u003","u004"],
+    "following": ["u002", "u003", "u004"],
+    "followers": ["u002", "u003", "u004"],
     "profession": "Full-Stack Developer",
-    "abilities": ["js","react","next"],
+    "abilities": ["js", "react", "next"],
     "profilePic": "url('https://cdn-icons-png.flaticon.com/512/3135/3135768.png')"
   },
   {
@@ -20,7 +20,7 @@
     "following": ["u001"],
     "followers": ["u001"],
     "profession": "Back-End Developer",
-    "abilities": ["php","laravel"],
+    "abilities": ["php", "laravel"],
     "profilePic": "url('https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359554_1280.png')"
   },
   {
@@ -32,7 +32,7 @@
     "following": ["u001"],
     "followers": ["u001"],
     "profession": "Back-End Developer",
-    "abilities": ["js","node","express"],
+    "abilities": ["js", "node", "express"],
     "profilePic": "url('https://cdn-icons-png.flaticon.com/512/3135/3135768.png')"
   },
   {
@@ -44,7 +44,43 @@
     "following": ["u001"],
     "followers": ["u001"],
     "profession": "Front-End Developer",
-    "abilities": ["js","angular"],
+    "abilities": ["js", "angular"],
+    "profilePic": "../../../public/profile.png"
+  },
+  {
+    "id": "u005",
+    "name": "Lionel",
+    "lastName": "Messi",
+    "birthday": "11-12-1985",
+    "email": "lionelmessi@example.com",
+    "following": [],
+    "followers": ["u002", "u003", "u004"],
+    "profession": "Football player",
+    "abilities": ["Left-Foot", "World champion"],
+    "profilePic": "../../../public/profile.png"
+  },
+  {
+    "id": "u006",
+    "name": "Cristiano",
+    "lastName": "Ronaldo",
+    "birthday": "11-12-1985",
+    "email": "cristianoronaldo@example.com",
+    "following": [],
+    "followers": ["u002", "u003", "u004"],
+    "profession": "Football player",
+    "abilities": ["Right-foot"],
+    "profilePic": "../../../public/profile.png"
+  },
+  {
+    "id": "u007",
+    "name": "Neymar",
+    "lastName": "Jr",
+    "birthday": "11-12-1985",
+    "email": "neymatjr@example.com",
+    "following": ["u001"],
+    "followers": ["u002", "u003", "u004"],
+    "profession": "Football player",
+    "abilities": ["Right-foot"],
     "profilePic": "../../../public/profile.png"
   }
 ]

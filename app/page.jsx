@@ -1,5 +1,6 @@
 import { LeftPanel } from "./components/LeftPanel/LeftPanel";
 import { Posts } from "./components/Posts/Posts";
+import { RightPanel } from "./components/RightPanel/RightPanel";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -7,7 +8,7 @@ export default function Home() {
     <main className={styles.main}>
       <LeftPanel />
       <Posts />
-      <LeftPanel />
+      <RightPanel/>
     </main>
   );
 }

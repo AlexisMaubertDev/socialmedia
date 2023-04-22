@@ -7,6 +7,7 @@ export function Comments({ comment }) {
   const userloged = "u001";
   const [like, setLike] = useState(comment.likes);
   const [show, setShow] = useState(false);
+  const [lookChanges, setLookChanges] = useState(comment.responses.length);
 
   const handleLike = () => {
     if (like.includes(userloged)) {
@@ -15,9 +16,14 @@ export function Comments({ comment }) {
       setLike([...like, userloged]);
     }
   };
+
   const handleShow = () => {
     setShow(!show);
   };
+
+  const onChange = () => {
+    setLookChanges(comment.responses.length);
+  }
 
   return (
     <>
@@ -31,23 +37,14 @@ export function Comments({ comment }) {
             </p>
           </li>
           <li>
-            <p onClick={handleShow}>
-              {show ? "Answers ▲" : "Answers ▼"}
-            </p>
+            <p onClick={handleShow}>{show ? "Answers ▲" : "Answers ▼"}</p>
           </li>
         </ul>
       </div>
       {comment.responses.map((response) => {
-        return (
-          <Response
-            response={response}
-            comment={comment}
-            key={response.id}
-            show={show}
-          />
-        );
+        return <Response response={response} key={response.id} show={show} />;
       })}
-      <AddComment comment={comment} show={show} />
+      <AddComment comment={comment} show={show} onChange={onChange} />
     </>
   );
 }

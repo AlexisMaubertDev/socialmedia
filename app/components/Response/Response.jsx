@@ -1,9 +1,8 @@
 import styles from "./Response.module.css";
 import { useState } from "react";
 import users from "../../Users.json";
-import { AddComment } from "../AddComment/AddComment";
 
-export function Response({ response, comment, show}) {
+export function Response({ response, show}) {
   const userloged = "u001";
   const [like, setLike] = useState(response.likes);
 

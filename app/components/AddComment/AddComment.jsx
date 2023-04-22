@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./AddComment.module.css";
 
-export function AddComment({ comment, lookChanges, changes, show }) {
+export function AddComment({ comment, onChange, changes, show }) {
   const [currentResponse, setCurrentResponse] = useState("");
   const userloged = "u001";
 
@@ -14,11 +14,18 @@ export function AddComment({ comment, lookChanges, changes, show }) {
         likes: [],
       });
       setCurrentResponse("");
-      lookChanges(changes + "0");
+      onChange();
     }
   };
+
   return (
-    <div className={!show ? styles.inputResponseContainer : styles.inputResponseContainer + " " + styles.showinput}>
+    <div
+      className={
+        !show
+          ? styles.inputResponseContainer
+          : styles.inputResponseContainer + " " + styles.showinput
+      }
+    >
       <div className={styles.inputResponse}>
         <input
           type="text"
